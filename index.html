@@ -322,6 +322,7 @@
 
   /* RESPONSIVE */
   @media (max-width: 900px) {
+    html, body { overflow-x: hidden; max-width: 100vw; }
     nav { padding: 14px 24px; }
     nav ul { display: none; }
     #hero, section { padding: 100px 24px 60px; }
@@ -333,6 +334,12 @@
     .contact-trust { flex-direction: column; align-items: center; gap: 12px; }
     .meta-band { padding: 20px 24px; }
     .meta-band-stat { margin-left: 0; }
+    .stat-grid { grid-template-columns: 1fr 1px 1fr !important; }
+    .stat-grid > div:nth-child(5),
+    .stat-grid > div:nth-child(6),
+    .stat-grid > div:nth-child(7) { display: none; }
+    [style*="grid-template-columns:repeat(3,1fr)"] { grid-template-columns: 1fr !important; }
+    .stat-num { font-size: 2rem !important; }
   }
 </style>
 
